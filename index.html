@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+    New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+    Tutorial 14
+    Case Problem 3
+
+      Building a Pizza at Red Ball Pizza
+      Author: Hesbon Osoro
+      Date: 12/11/22 
+
+      Filename:   rb_pizza.html
+
+   -->
+
+    <meta charset="utf-8" />
+    <title>Red Ball Pizza Build a Pizza</title>
+    <link href="rb_base.css" rel="stylesheet" />
+    <link href="rb_layout.css" rel="stylesheet" />
+    <link href="rb_forms.css" rel="stylesheet" />
+    <script src="rb_build.js" async></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="rb_logo.png" alt="Red Ball Pizza" id="logoimg" />
+      <nav>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">directions</a></li>
+          <li><a href="#">coupons</a></li>
+          <li><a href="#">orders</a></li>
+          <li><a href="#">catering</a></li>
+          <li><a href="#">reviews</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="build">
+      <h1>Build your Pizza</h1>
+      <div id="previewBox"></div>
+
+      <div id="pizzaBox">
+        <h1>MY PIZZA</h1>
+        <p id="pizzaSummary">14" pizza, thin</p>
+        <label id="quantityLabel" for="pizzaQuantity">Quantity</label>
+        <select id="pizzaQuantity" name="pizzaQuantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <input type="button" id="addToCart" value="ADD TO CART" />
+      </div>
+
+      <fieldset id="pizzaOptions">
+        <label id="sizeLabel" for="pizzaSize">Size (in.)</label>
+        <select id="pizzaSize" name="pizzaSize">
+          <option value="12">12" ($11.00)</option>
+          <option value="14" selected>14" ($13.00)</option>
+          <option value="16">16" ($16.00)</option>
+        </select>
+        <label for="crustBox">Pizza Crust</label>
+        <select name="pizzaCrust" id="pizzaCrust">
+          <option value="thin" selected>thin</option>
+          <option value="thick">thick</option>
+          <option value="stuffed">stuffed (+ $3.00)</option>
+          <option value="pan">pan (+ $2.00)</option>
+        </select>
+        <label for="doubleSauce">Double Sauce<br />(+ $1.50)</label>
+        <input type="checkbox" id="doubleSauce" name="doubleSauce" />
+        <label for="doubleCheese">Double Cheese<br />(+ $1.50)</label>
+        <input type="checkbox" id="doubleCheese" name="doubleCheese" />
+      </fieldset>
+
+      <fieldset id="toppings">
+        <div>
+          <label>Toppings ($1.50 ea.)</label>
+          <img src="rb_full.png" alt="full" />
+          <img src="rb_left.png" alt="left" />
+          <img src="rb_right.png" alt="right" />
+          <img src="rb_none.png" alt="none" />
+        </div>
+        <div>
+          <label>Pepperoni</label>
+          <input class="topping" type="radio" name="pepperoni" value="full" />
+          <input class="topping" type="radio" name="pepperoni" value="left" />
+          <input class="topping" type="radio" name="pepperoni" value="right" />
+          <input
+            class="topping"
+            type="radio"
+            name="pepperoni"
+            value="none"
+            checked
+          />
+        </div>
+        <div>
+          <label>Ham</label>
+          <input class="topping" type="radio" name="ham" value="full" />
+          <input class="topping" type="radio" name="ham" value="left" />
+          <input class="topping" type="radio" name="ham" value="right" />
+          <input class="topping" type="radio" name="ham" value="none" checked />
+        </div>
+        <div>
+          <label>Sausage</label>
+          <input class="topping" type="radio" name="sausage" value="full" />
+          <input class="topping" type="radio" name="sausage" value="left" />
+          <input class="topping" type="radio" name="sausage" value="right" />
+          <input
+            class="topping"
+            type="radio"
+            name="sausage"
+            value="none"
+            checked
+          />
+        </div>
+        <div>
+          <label>Chicken</label>
+          <input class="topping" type="radio" name="chicken" value="full" />
+          <input class="topping" type="radio" name="chicken" value="left" />
+          <input class="topping" type="radio" name="chicken" value="right" />
+          <input
+            class="topping"
+            type="radio"
+            name="chicken"
+            value="none"
+            checked
+          />
+        </div>
+        <div>
+          <label>Mushrooms</label>
+          <input class="topping" type="radio" name="mushroom" value="full" />
+          <input class="topping" type="radio" name="mushroom" value="left" />
+          <input class="topping" type="radio" name="mushroom" value="right" />
+          <input
+            class="topping"
+            type="radio"
+            name="mushroom"
+            value="none"
+            checked
+          />
+        </div>
+        <div>
+          <label>Green Peppers</label>
+          <input class="topping" type="radio" name="greenpepper" value="full" />
+          <input class="topping" type="radio" name="greenpepper" value="left" />
+          <input
+            class="topping"
+            type="radio"
+            name="greenpepper"
+            value="right"
+          />
+          <input
+            class="topping"
+            type="radio"
+            name="greenpepper"
+            value="none"
+            checked
+          />
+        </div>
+        <div>
+          <label>Onions</label>
+          <input class="topping" type="radio" name="onion" value="full" />
+          <input class="topping" type="radio" name="onion" value="left" />
+          <input class="topping" type="radio" name="onion" value="right" />
+          <input
+            class="topping"
+            type="radio"
+            name="onion"
+            value="none"
+            checked
+          />
+        </div>
+        <div>
+          <label>Tomatoes</label>
+          <input class="topping" type="radio" name="tomato" value="full" />
+          <input class="topping" type="radio" name="tomato" value="left" />
+          <input class="topping" type="radio" name="tomato" value="right" />
+          <input
+            class="topping"
+            type="radio"
+            name="tomato"
+            value="none"
+            checked
+          />
+        </div>
+        <div>
+          <label>Jalapenos</label>
+          <input class="topping" type="radio" name="jalapeno" value="full" />
+          <input class="topping" type="radio" name="jalapeno" value="left" />
+          <input class="topping" type="radio" name="jalapeno" value="right" />
+          <input
+            class="topping"
+            type="radio"
+            name="jalapeno"
+            value="none"
+            checked
+          />
+        </div>
+      </fieldset>
+    </section>
+
+    <aside id="cart">
+      <h1>Shopping Cart</h1>
+      <table id="cartTable">
+        <thead>
+          <tr>
+            <th>item</th>
+            <th>qty</th>
+            <th>price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tfoot>
+          <tr>
+            <td colspan="2">TOTAL</td>
+            <td colspan="2">
+              <input type="text" id="cartTotal" value="" readonly />
+            </td>
+          </tr>
+        </tfoot>
+        <tbody></tbody>
+      </table>
+    </aside>
+
+    <footer>
+      <h1>ORDER</h1>
+      <a href="#">Specials</a> <a href="#">Pizza</a> <a href="#">Pasta</a>
+      <h1>ABOUT US</h1>
+      <a href="#">Our Story</a> <a href="#">Blog</a> <a href="#">Catering</a>
+      <h1>CUSTOMER SERVICE</h1>
+      <a href="#">Gluten Free Crusts</a> <a href="#">Contact Us</a>
+      <address>
+        Red Ball Pizza <br />
+        811 Beach Drive <br />
+        Ormond Beach, FL 32175 <br />
+        (386) 555 - 7499
+      </address>
+    </footer>
+  </body>
+</html>
